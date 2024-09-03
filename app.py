@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 cars = pd.read_csv('./vehicles_us.csv')
-st.header("Data Analysis of Vehicle Sales Data", divider="blue")
+st.header("Data Analysis of Vehicle Sales Data")
 cars['is_4wd'] = cars['is_4wd'].fillna(0)
 cars = cars.dropna()
 fig_scatter = px.scatter(cars, x='model_year', y='days_listed', title='Model Year vs. Days Listed')
